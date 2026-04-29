@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software or the harmonised data table, please cite both the software (this repository / Zenodo DOI) and the accompanying article."
+title: "UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities"
+abstract: "Pipeline, configs, notebooks, and harmonised per-patch morphology-UHI table for the 66-city continuous-morphology study. Implements ingest, feature extraction, mixed-effects + XGBoost+SHAP attribution, empirical Pareto extraction, and morphology archetype clustering."
+authors:
+  - family-names: Emekci
+    given-names: Seyda
+    affiliation: "Department of Architecture, Ankara Yıldırım Beyazıt University, Ankara, Türkiye"
+    email: semekci@aybu.edu.tr
+  - family-names: Emekci
+    given-names: Hakan
+    affiliation: "Graduate School of Sciences, TED University, Ankara, Türkiye"
+    email: hakan.emekci@tedu.edu.tr
+type: software
+license: MIT
+repository-code: "https://github.com/hemekci/UHI"
+url: "https://github.com/hemekci/UHI"
+keywords:
+  - urban heat island
+  - urban morphology
+  - satellite remote sensing
+  - land surface temperature
+  - machine learning
+  - SHAP
+  - mixed-effects model
+  - multi-city study
+  - Pareto frontier
+  - climate-smart design
+  - building footprints
+  - Köppen climate zones
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Beyond Local Climate Zones: Continuous Morphology Archetypes for Heat Mitigation Across 66 Cities"
+  authors:
+    - family-names: Emekci
+      given-names: Seyda
+    - family-names: Emekci
+      given-names: Hakan
+  journal: "Sustainable Cities and Society"
+  year: 2026
+  notes: "Manuscript under review at the time of repository release."
