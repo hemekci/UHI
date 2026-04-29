@@ -1,0 +1,86 @@
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# Editor backups
+*.swp
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+.uv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Hydra / experiment outputs
+outputs/
+multirun/
+wandb/
+mlruns/
+checkpoints/
+
+# Data — never commit large or proprietary data
+data/raw/
+data/interim/
+data/processed/
+*.tif
+*.tiff
+*.nc
+*.h5
+*.hdf5
+*.parquet
+*.feather
+
+# Secrets / config
+.env
+.env.*
+settings.json
+credentials.json
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+*.iml
