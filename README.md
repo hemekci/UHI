@@ -1,6 +1,7 @@
 # UHI — Continuous Morphology Archetypes for Heat Mitigation
 
 [![CI](https://github.com/hemekci/UHI/actions/workflows/ci.yml/badge.svg)](https://github.com/hemekci/UHI/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19897974.svg)](https://doi.org/10.5281/zenodo.19897974)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
@@ -144,9 +145,25 @@ The harmonised per-patch table for all 66 cities will be deposited on
 
 ## Citation
 
-While the manuscript is under review, please **do not** cite this repository.
-A complete citation block (article DOI + Zenodo DOI + BibTeX) will be added
-here on acceptance. Until then, contact the authors.
+While the manuscript is under review, please cite the software via Zenodo:
+
+> Emekci, S., & Emekci, H. (2026). *UHI: Continuous Morphology Archetypes
+> for Heat Mitigation Across Cities* (Version v0.1.0) [Software]. Zenodo.
+> https://doi.org/10.5281/zenodo.19897974
+
+The DOI above is the **concept DOI** — it always resolves to the latest
+release. The article DOI will be added here once the paper is accepted.
+
+```bibtex
+@software{emekci2026uhi,
+  author    = {Emekci, Seyda and Emekci, Hakan},
+  title     = {{UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities}},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19897974},
+  url       = {https://doi.org/10.5281/zenodo.19897974}
+}
+```
 
 ---
 
