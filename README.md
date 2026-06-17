@@ -23,10 +23,16 @@ building-footprint products, and recover the published results bit-for-bit
 
 ## Status
 
-The manuscript is **under review**. The skeleton below is in place; the
-runnable pipeline, harmonised patch-level table, and figure-generating
-notebooks will land here on or before the published-paper milestone, under
-the open MIT licence.
+The manuscript is **under major revision** at *Sustainable Cities and Society*.
+The skeleton below is in place; the runnable pipeline, harmonised patch-level
+table, and figure-generating notebooks will land here on or before the
+published-paper milestone, under the open MIT licence.
+
+Headline result: across 66 cities and 14 Köppen zones, tree-canopy fraction is
+the only universal cooling lever (negative in all 14 zones, significant in 13);
+the global within-city mixed-effects model reaches marginal R² = 0.25 and
+conditional R² = 0.39, and three exploratory morphology archetypes summarise the
+empirical (UHI, density) Pareto front.
 
 If you are a reviewer or editor and need pre-publication access to the code
 or data, please contact the corresponding author (see [Contact](#contact)).
@@ -42,9 +48,13 @@ Everything needed to reproduce the paper end-to-end:
     Microsoft / Google / VIDA building footprints with heights, 3D-GloBFP,
     GlobalBuildingAtlas, GLAMOUR, ESA WorldCover, ERA5-Land, and Köppen
     classifications;
-  - `features/` — per-1 km-patch morphology features (built-up fraction,
-    building density, mean height and CV, canyon aspect ratio, tree-canopy
-    fraction, bare soil, water, albedo proxies, NDVI);
+  - `features/` — per-1 km-patch morphology features. Eight are retained for
+    inference (building density, mean height, height CV, tree-canopy, built-up,
+    bare-soil and water fractions, and 80th-percentile NDVI); canyon aspect
+    ratio and street-orientation entropy are computed but excluded for
+    instability and uneven Global-South coverage. A physical-plausibility
+    quality screen (`|UHI anomaly| <= 40 C`) removes residual cloud / fill
+    artifacts before modelling;
   - `models/` — within-city-centred linear mixed-effects model with city
     random intercept, complementary XGBoost regressor with TreeExplainer SHAP,
     and per-Köppen-zone refits;
