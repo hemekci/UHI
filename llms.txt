@@ -61,6 +61,8 @@ intercept, fitted globally and within each Köppen zone.
 - src/metrics — R², ICC, hierarchical diagnostics
 - run/conf — Hydra configuration
 - run/pipeline — stage entry points, including make_figures.py
+- tests — 18 unit and smoke tests
+- docs/figures — all 15 published figures as PNG
 
 ## Scope and limitations
 
