@@ -4,14 +4,14 @@ message: >-
   accompanying article.
 title: "UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities"
 abstract: >-
-  Pipeline, configs, notebooks and harmonised per-patch morphology-UHI table for the
+  Analysis pipeline, Hydra configuration and harmonised per-patch morphology-UHI table for the
   66-city continuous-morphology study published in Sustainable Cities and Society.
   Implements ingest, feature extraction, mixed-effects and XGBoost+SHAP attribution,
   empirical Pareto extraction, and morphology archetype clustering.
 type: software
 license: MIT
 version: v0.2.0
-date-released: "2026-09-03"
+date-released: "2026-09-09"
 repository-code: "https://github.com/hemekci/UHI"
 url: "https://github.com/hemekci/UHI"
 authors:
