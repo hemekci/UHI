@@ -10,7 +10,10 @@ Emekci, S., & Emekci, H. (2026). Beyond local climate zones: Continuous morpholo
 archetypes for heat mitigation across 66 cities. Sustainable Cities and Society, 150, 107814.
 https://doi.org/10.1016/j.scs.2026.107814
 
-Software and data: https://doi.org/10.5281/zenodo.19897974 (concept DOI, always latest version)
+Cite the article above. The code and data are released as its supplement and are not
+separately citable outputs.
+
+Archived release (for version pinning): https://doi.org/10.5281/zenodo.19897974
 Repository: https://github.com/hemekci/UHI
 
 ## What this is

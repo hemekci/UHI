@@ -105,11 +105,8 @@ tests/            18 unit and smoke tests
 
 ## How to cite
 
-Cite **the article** for the findings, and **the archived release** if you use the code or
-the data. GitHub's *Cite this repository* button produces both from
-[`CITATION.cff`](CITATION.cff); machine-readable metadata is in
-[`codemeta.json`](codemeta.json) and [`.zenodo.json`](.zenodo.json), and a condensed
-summary for automated readers is in [`llms.txt`](llms.txt).
+Please cite the article. It is the citable record for this work — the code and data are
+released as its supplement rather than as separately citable outputs.
 
 ```bibtex
 @article{emekci2026morphology,
@@ -121,19 +118,16 @@ summary for automated readers is in [`llms.txt`](llms.txt).
   pages   = {107814},
   doi     = {10.1016/j.scs.2026.107814}
 }
-
-@software{emekci2026uhi,
-  author    = {Emekci, Seyda and Emekci, Hakan},
-  title     = {{UHI}: Continuous Morphology Archetypes for Heat Mitigation Across Cities},
-  year      = {2026},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.19897974},
-  url       = {https://github.com/hemekci/UHI}
-}
 ```
 
-The Zenodo DOI is a *concept* DOI and always resolves to the latest release; to cite a
-specific version, use the version DOI on that release's Zenodo page.
+GitHub's *Cite this repository* button returns the same reference from
+[`CITATION.cff`](CITATION.cff). Machine-readable metadata is in
+[`codemeta.json`](codemeta.json) and [`.zenodo.json`](.zenodo.json), and a condensed
+summary for automated readers is in [`llms.txt`](llms.txt).
+
+This release is archived at Zenodo under
+[10.5281/zenodo.19897974](https://doi.org/10.5281/zenodo.19897974) for permanence and
+version pinning; quote that DOI if you need to identify the exact version you ran.
 
 ## Scope and limitations
 

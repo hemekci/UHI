@@ -1,8 +1,7 @@
 cff-version: 1.2.0
 message: >-
   If you use this software or the harmonised data table, please cite the
-  accompanying article (preferred) and, where the software itself matters,
-  the archived Zenodo release.
+  accompanying article.
 title: "UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities"
 abstract: >-
   Pipeline, configs, notebooks and harmonised per-patch morphology-UHI table for the
