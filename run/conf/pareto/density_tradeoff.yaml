@@ -1,0 +1,9 @@
+# Empirical Pareto extraction — (UHI anomaly, building density) trade-off, per Koppen zone.
+
+name: density_tradeoff
+objectives:
+  - { key: uhi_anomaly_c,   sign: +1 }  # minimize
+  - { key: building_density, sign: -1 }  # maximize (negated for minimization)
+
+group_by: koppen_zone
+min_points_per_zone: 30

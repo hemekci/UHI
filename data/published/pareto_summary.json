@@ -1,0 +1,97 @@
+{
+  "n_zones": 15,
+  "n_pareto_total": 144,
+  "per_zone": [
+    {
+      "zone": "Af",
+      "n_total": 2076,
+      "n_pareto": 6,
+      "pareto_fraction": 0.002890173410404624
+    },
+    {
+      "zone": "Am",
+      "n_total": 838,
+      "n_pareto": 6,
+      "pareto_fraction": 0.007159904534606206
+    },
+    {
+      "zone": "Aw",
+      "n_total": 2584,
+      "n_pareto": 4,
+      "pareto_fraction": 0.0015479876160990713
+    },
+    {
+      "zone": "BSk",
+      "n_total": 1473,
+      "n_pareto": 10,
+      "pareto_fraction": 0.006788866259334691
+    },
+    {
+      "zone": "BWh",
+      "n_total": 3678,
+      "n_pareto": 11,
+      "pareto_fraction": 0.002990755845568244
+    },
+    {
+      "zone": "Cfa",
+      "n_total": 6649,
+      "n_pareto": 7,
+      "pareto_fraction": 0.001052789893217025
+    },
+    {
+      "zone": "Cfb",
+      "n_total": 2747,
+      "n_pareto": 9,
+      "pareto_fraction": 0.0032763014197306154
+    },
+    {
+      "zone": "Csa",
+      "n_total": 3337,
+      "n_pareto": 14,
+      "pareto_fraction": 0.004195385076415942
+    },
+    {
+      "zone": "Csb",
+      "n_total": 802,
+      "n_pareto": 14,
+      "pareto_fraction": 0.017456359102244388
+    },
+    {
+      "zone": "Cwa",
+      "n_total": 2245,
+      "n_pareto": 7,
+      "pareto_fraction": 0.0031180400890868597
+    },
+    {
+      "zone": "Cwb",
+      "n_total": 1867,
+      "n_pareto": 17,
+      "pareto_fraction": 0.009105516871987145
+    },
+    {
+      "zone": "Dfa",
+      "n_total": 2123,
+      "n_pareto": 5,
+      "pareto_fraction": 0.0023551577955723034
+    },
+    {
+      "zone": "Dfb",
+      "n_total": 1338,
+      "n_pareto": 10,
+      "pareto_fraction": 0.007473841554559043
+    },
+    {
+      "zone": "Dsa",
+      "n_total": 234,
+      "n_pareto": 9,
+      "pareto_fraction": 0.038461538461538464
+    },
+    {
+      "zone": "Dwa",
+      "n_total": 1507,
+      "n_pareto": 15,
+      "pareto_fraction": 0.009953550099535502
+    }
+  ],
+  "pareto_parquet": "data/features/full.pareto.parquet"
+}

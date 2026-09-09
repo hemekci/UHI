@@ -1,0 +1,12 @@
+name: ankara_tmy
+station: LTAC  # Esenboğa
+latitude: 40.128
+longitude: 32.995
+elevation_m: 949
+koppen: Dsa
+epw_path: data/weather/TUR_Ankara.171280_IWEC.epw
+
+heatwave_week:
+  # Selected via P95 daily Tmax over TMY
+  start: 2026-07-20T00:00:00
+  end: 2026-07-27T00:00:00

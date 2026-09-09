@@ -1,0 +1,16 @@
+# Linear mixed-effects model — primary inferential model.
+
+name: mixed_effects
+kind: mixed_effects
+per_zone: false
+city_col: city_id
+
+reml: true
+method: lbfgs
+max_iter: 500
+
+shap:
+  top_k_features: 5
+  top_k_interactions: 0
+  compute: true
+  explainer: linear

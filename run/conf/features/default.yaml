@@ -1,0 +1,32 @@
+# Feature engineering configuration.
+
+name: default
+
+morphology_features:
+  - building_density
+  - height_mean
+  - height_cv
+  - canyon_aspect_proxy
+  - orientation_entropy
+  - ndvi_p80
+  - tree_canopy_frac
+  - impervious_frac
+  - water_frac
+  - albedo_proxy
+
+context_features:
+  - elevation_m
+  - distance_to_coast_km
+  - latitude
+  - koppen_zone
+  - city_summer_air_t
+  - pop_density
+
+target:
+  name: uhi_anomaly_c
+  method: rural_reference_p50
+  rolling_summers: 3
+
+drop_if:
+  min_clear_obs: 20
+  height_confidence_threshold: 0.2    # used in C7 robustness run

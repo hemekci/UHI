@@ -1,0 +1,32 @@
+# Root Hydra config for Global Morphology × UHI
+# Override groups via CLI: `python run/pipeline/run_model.py cities=full model=xgboost_perzone`
+
+defaults:
+  - _self_
+  - cities: demo
+  - ingest: default
+  - features: default
+  - morphology: default
+  - model: xgboost_global
+  - pareto: density_tradeoff
+  - typology: kmeans
+  - weather: era5_landsat
+  - override hydra/job_logging: default
+  - override hydra/hydra_logging: default
+
+seed: 42
+experiment_name: baseline
+
+# Physical-plausibility quality screen on the surface-UHI target.
+# Patches with |uhi_anomaly_c| above this bound are residual cloud/fill artifacts
+# and are dropped before modelling, Pareto extraction, and clustering.
+uhi_abs_max_c: 40.0
+output_root: ${oc.env:EXPERIMENT_OUTPUT_ROOT,./outputs}
+data_root: ${oc.env:DATA_ROOT,./data}
+
+hydra:
+  run:
+    dir: ${output_root}/${experiment_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${output_root}/${experiment_name}/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

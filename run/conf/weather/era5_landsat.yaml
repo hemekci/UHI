@@ -1,0 +1,15 @@
+# Weather / climate-context configuration for the data-driven pipeline.
+
+name: era5_landsat
+
+era5_land:
+  temperature_variable: temperature_2m
+  summer_n_months: [6, 7, 8]   # JJA
+  summer_s_months: [12, 1, 2]  # DJF
+
+future_projection:
+  source: copernicus_c3s_cmip6
+  scenario: ssp585
+  horizon_year: 2050
+  delta_variable: summer_mean_t2m
+  ensemble: median

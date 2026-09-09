@@ -54,7 +54,10 @@ The Zenodo DOI above is a *concept* DOI: it always resolves to the most recent r
 To cite a specific version, use the version DOI shown on that release's Zenodo page.
 
 GitHub's **Cite this repository** button (top right) produces the same entries from
-[`CITATION.cff`](CITATION.cff).
+[`CITATION.cff`](CITATION.cff). Machine-readable metadata is also provided in
+[`codemeta.json`](codemeta.json) and [`.zenodo.json`](.zenodo.json), and a condensed
+plain-text summary of the study, its numbers and its file layout is in
+[`llms.txt`](llms.txt) for automated readers.
 
 ---
 
@@ -84,6 +87,19 @@ variation to it within climate zones.
 - Per-zone models lift the pooled marginal *R*² to **0.38**, reaching 0.55 in Dwa.
 - **144 Pareto-efficient patches** cluster into **three climate-smart archetypes**.
 
+### The three archetypes
+
+Extracted from the 144 Pareto-efficient patches; medians per archetype.
+
+| | *n* | UHI anomaly | Building density | Tree canopy | Built-up | Mean height |
+|---|---:|---:|---:|---:|---:|---:|
+| **A1** dense paved | 81 | −0.26 °C | 0.54 | 5 % | 90 % | 16 m |
+| **A2** open vegetated | 52 | −2.95 °C | 0.26 | 24 % | 61 % | 11 m |
+| **A3** tall sparse | 11 | −4.41 °C | 0.25 | 8 % | 62 % | 27 m |
+
+Full profiles, including the Köppen zones each archetype appears in, are in
+[`data/published/archetype_cards.json`](data/published/archetype_cards.json).
+
 ---
 
 ## Figures
@@ -111,14 +127,72 @@ All 15 figures are in [`docs/figures/`](docs/figures/).
 ## Repository layout
 
 ```
-pipeline/     ingest → features → models → archetypes
-configs/      Hydra configuration
-scripts/      entry points for each pipeline stage
-notebooks/    reproducibility notebooks
-data/         data manifest (sources, licences, access instructions)
-docs/figures/ all published figures as PNG
-tests/        smoke tests
+src/              analysis package
+  ingest/         Earth Engine ingest, city rosters
+  features/       patch features, quality screening
+  morphology/     building-footprint morphology extraction
+  model/          mixed-effects and XGBoost + SHAP
+  pareto/         empirical Pareto extraction
+  typology/       archetype clustering
+  metrics/        R², ICC, hierarchical diagnostics
+run/
+  conf/           Hydra configuration (cities, features, models, Pareto, typology)
+  pipeline/       stage entry points, incl. make_figures.py
+data/published/   harmonised patch tables + model outputs (CC BY 4.0)
+docs/figures/     all 15 published figures as PNG
+tests/            unit and smoke tests
 ```
+
+## Reproducing the results
+
+```bash
+git clone https://github.com/hemekci/UHI.git && cd UHI
+uv venv && uv pip install -e .
+
+# place the published table where the pipeline expects it
+mkdir -p data/features
+cp data/published/uhi_morphology_patches_v1.parquet data/features/full.parquet
+
+# every modelling stage then runs from the repository alone
+python run/pipeline/run_diagnostics.py          cities=full   # global mixed-effects model
+python run/pipeline/run_perzone_diagnostics.py  cities=full   # per-zone models
+python run/pipeline/run_pareto.py               cities=full   # Pareto fronts
+python run/pipeline/run_typology.py             cities=full   # archetype clustering
+python run/pipeline/make_figures.py                           # regenerate every figure
+```
+
+Re-running the *ingest* stage additionally requires a Google Earth Engine account,
+since the Landsat, WorldCover and ERA5-Land layers are pulled from GEE. Everything
+downstream of ingest runs from the published tables alone.
+
+## Reusing the dataset
+
+The harmonised table is the component most likely to be useful independently of the
+article's own analysis. Each row is a 1 km² built-up patch with a summer surface-UHI
+anomaly and eight continuous morphology descriptors, comparable across 66 cities and
+15 Köppen zones — a sample design that is expensive to assemble and is released here so
+that it need not be rebuilt.
+
+It supports, among other uses:
+
+- benchmarking alternative UHI models on a fixed, documented multi-city sample;
+- testing whether a morphology–temperature relationship established in one city
+  generalises across climate regimes;
+- extending the analysis with additional predictors, cities or time periods;
+- comparing continuous morphology descriptors against categorical Local Climate Zone
+  classes on identical patches, since `lcz_class` is included;
+- teaching multi-city urban-climate analysis with a ready, reproducible dataset.
+
+### Scope and limitations
+
+The dependent variable is *surface* UHI from Landsat land-surface temperature. It is not
+a measure of canopy-layer air temperature or of human thermal comfort, and the article's
+design implications are framed accordingly. Building-height coverage is uneven and absent
+for about half the patches, sparsest in the Global South; the article reports a
+height-exclusion sensitivity analysis showing the conclusions do not rest on those two
+features. Coefficients are specific to the 1 km aggregation scale. The analysis is
+observational, so the coefficients quantify association rather than identified causal
+effect.
 
 ## Data sources
 

@@ -72,6 +72,11 @@ data/processed/
 *.parquet
 *.feather
 
+# ...but the published data tables ARE part of the release
+!data/published/
+!data/published/*.parquet
+!data/published/*.json
+
 # Secrets / config
 .env
 .env.*

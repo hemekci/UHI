@@ -1,0 +1,47 @@
+# Ingestion configuration — Google Earth Engine + Open Buildings.
+
+name: default
+
+gee:
+  project: uhi-morphology-2026   # Cloud project registered with Earth Engine
+  service_account: null           # left null: use interactive credentials from `earthengine authenticate`
+
+patch:
+  resolution_m: 1000          # 1 km x 1 km
+  min_built_up_fraction: 0.5  # drop patches with < 50% built-up coverage
+  rural_reference_ring_km: [10, 20]  # rural reference outside urban extent
+
+landsat:
+  collection: LANDSAT/LC08/C02/T1_L2
+  years: [2021, 2022, 2023, 2024, 2025]
+  summer_jja_n: true
+  max_cloud_cover_pct: 30
+  qa_pixel_band: QA_PIXEL
+
+modis:
+  collection: MODIS/061/MOD11A2
+  years: [2021, 2022, 2023, 2024, 2025]
+
+worldcover:
+  image: ESA/WorldCover/v200
+
+lcz:
+  image: users/demuzere/lcz/lcz_global_v3
+
+era5_land:
+  collection: ECMWF/ERA5_LAND/MONTHLY_AGGR
+  variables: [temperature_2m, dewpoint_temperature_2m]
+
+worldpop:
+  collection: WorldPop/GP/100m/pop
+  year: 2020
+
+srtm:
+  image: USGS/SRTMGL1_003
+
+open_buildings:
+  source: vida
+  cache_dir: ${data_root}/open_buildings
+
+cache_dir: ${data_root}/patches
+shard_by: koppen

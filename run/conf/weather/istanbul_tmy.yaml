@@ -1,0 +1,11 @@
+name: istanbul_tmy
+station: LTBA  # Atatürk
+latitude: 40.977
+longitude: 28.824
+elevation_m: 37
+koppen: Csa
+epw_path: data/weather/TUR_Istanbul.170600_IWEC.epw
+
+heatwave_week:
+  start: 2026-07-25T00:00:00
+  end: 2026-08-01T00:00:00

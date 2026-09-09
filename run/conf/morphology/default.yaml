@@ -1,0 +1,24 @@
+# Continuous-morphology feature definitions.
+# Each entry describes one patch-level feature extracted in src/features/.
+
+name: default
+
+variables:
+  - { name: building_density,     lower: 0.0,  upper: 1.0,   unit: ratio, kind: continuous }
+  - { name: height_mean,          lower: 0.0,  upper: 150.0, unit: m,     kind: continuous }
+  - { name: height_cv,            lower: 0.0,  upper: 2.5,   unit: ratio, kind: continuous }
+  - { name: canyon_aspect_proxy,  lower: 0.0,  upper: 6.0,   unit: ratio, kind: continuous }
+  - { name: orientation_entropy,  lower: 0.0,  upper: 3.0,   unit: nats,  kind: continuous }
+  - { name: ndvi_p80,             lower: -0.2, upper: 0.9,   unit: ratio, kind: continuous }
+  - { name: tree_canopy_frac,     lower: 0.0,  upper: 1.0,   unit: ratio, kind: continuous }
+  - { name: impervious_frac,      lower: 0.0,  upper: 1.0,   unit: ratio, kind: continuous }
+  - { name: water_frac,           lower: 0.0,  upper: 1.0,   unit: ratio, kind: continuous }
+  - { name: albedo_proxy,         lower: 0.0,  upper: 0.6,   unit: ratio, kind: continuous }
+
+context:
+  - { name: elevation_m,          unit: m,     kind: continuous }
+  - { name: distance_to_coast_km, unit: km,    kind: continuous }
+  - { name: latitude,             unit: deg,   kind: continuous }
+  - { name: koppen_zone,          unit: label, kind: categorical }
+  - { name: city_summer_air_t,    unit: C,     kind: continuous }
+  - { name: pop_density,          unit: p/km2, kind: continuous }

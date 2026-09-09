@@ -1,0 +1,9 @@
+# Small demo city list for dev iteration.
+# 4 cities across 4 Köppen zones — enough to exercise the pipeline end-to-end.
+
+name: demo
+cities:
+  - { id: ANK, name: Ankara,    country: TR, lat: 39.93, lon: 32.86, koppen: Dsa, radius_km: 15 }
+  - { id: IST, name: Istanbul,  country: TR, lat: 41.02, lon: 28.98, koppen: Csa, radius_km: 25 }
+  - { id: LON, name: London,    country: GB, lat: 51.51, lon: -0.13, koppen: Cfb, radius_km: 20 }
+  - { id: SIN, name: Singapore, country: SG, lat:  1.35, lon: 103.82, koppen: Af,  radius_km: 20 }

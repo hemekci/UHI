@@ -1,0 +1,9 @@
+name: kmeans
+kind: kmeans
+
+k_candidates: [3, 4, 5, 6, 7]
+selection_metric: silhouette
+min_silhouette: 0.45
+standardize: true
+random_seed: ${seed}
+input: pareto_points  # cluster only Pareto-efficient patches (union over zones)

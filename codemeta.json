@@ -1,0 +1,69 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "https://doi.org/10.5281/zenodo.19897974",
+  "name": "UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities",
+  "description": "Reproducible pipeline and harmonised open dataset relating continuous urban morphology to summer surface urban heat island intensity across 66 cities and 15 Köppen climate zones, using Landsat 8/9 land-surface temperature and open global building-footprint-with-height products. Implements ingest, feature extraction, linear mixed-effects and XGBoost+SHAP attribution, empirical Pareto extraction and morphology archetype clustering.",
+  "codeRepository": "https://github.com/hemekci/UHI",
+  "programmingLanguage": [{ "@type": "ComputerLanguage", "name": "Python" }],
+  "runtimePlatform": "Python 3.11+",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "v0.2.0",
+  "datePublished": "2026-09-03",
+  "developmentStatus": "active",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Seyda",
+      "familyName": "Emekci",
+      "email": "semekci@aybu.edu.tr",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Department of Architecture, Ankara Yıldırım Beyazıt University, Ankara, Türkiye"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Hakan",
+      "familyName": "Emekci",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Institute of Informatics, Hacettepe University, Ankara, Türkiye"
+      }
+    }
+  ],
+  "referencePublication": {
+    "@type": "ScholarlyArticle",
+    "identifier": "https://doi.org/10.1016/j.scs.2026.107814",
+    "name": "Beyond local climate zones: Continuous morphology archetypes for heat mitigation across 66 cities",
+    "isPartOf": {
+      "@type": "PublicationIssue",
+      "datePublished": "2026",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Sustainable Cities and Society",
+        "issn": "2210-6707"
+      }
+    },
+    "pageStart": "107814",
+    "volumeNumber": "150"
+  },
+  "keywords": [
+    "urban heat island",
+    "surface urban heat island",
+    "urban morphology",
+    "land surface temperature",
+    "Landsat",
+    "building footprints",
+    "Local Climate Zones",
+    "Köppen climate zones",
+    "mixed-effects model",
+    "SHAP",
+    "explainable machine learning",
+    "Pareto frontier",
+    "climate-smart design",
+    "heat mitigation",
+    "urban climate",
+    "reproducibility"
+  ]
+}

@@ -1,0 +1,80 @@
+# UHI — Continuous Morphology Archetypes for Heat Mitigation Across 66 Cities
+
+> Companion code and open data for a peer-reviewed study quantifying how continuous urban
+> morphology relates to summer surface urban heat island (SUHI) intensity across 66 cities
+> and 15 Köppen climate zones, using harmonised satellite and open building-footprint data.
+
+## Citation
+
+Emekci, S., & Emekci, H. (2026). Beyond local climate zones: Continuous morphology
+archetypes for heat mitigation across 66 cities. Sustainable Cities and Society, 150, 107814.
+https://doi.org/10.1016/j.scs.2026.107814
+
+Software and data: https://doi.org/10.5281/zenodo.19897974 (concept DOI, always latest version)
+Repository: https://github.com/hemekci/UHI
+
+## What this is
+
+A reproducible pipeline and a harmonised patch-level dataset. Each row is a 1 km² built-up
+patch carrying a summer surface-UHI anomaly derived from 3-summer rolling-mean Landsat 8/9
+land-surface temperature, plus eight continuous morphology descriptors extracted from open
+global building-footprint-with-height products. The design isolates within-city morphology
+effects from climate-regime offsets using linear mixed-effects models with a city random
+intercept, fitted globally and within each Köppen zone.
+
+## Key facts
+
+- Sample: 33,715 harmonised 1 km² patches; 33,498 retained after a physical-plausibility
+  screen (|UHI anomaly| <= 40 °C). 66 cities, 15 Köppen climate zones.
+- Per-zone mixed-effects models are fitted for 14 of the 15 zones; Dsa has a single city,
+  so a city random intercept is not estimable there.
+- Global model: marginal R² = 0.25, conditional R² = 0.39, ICC = 0.18. All eight morphology
+  features significant at 95%.
+- Tree-canopy fraction is the only universal cooling lever: negative coefficient in all 14
+  modelled zones, significant in 13 (standardised beta = -0.64, p < 1e-122).
+- Other cooling levers: water fraction (-0.58), 80th-percentile NDVI (-0.31), building-height
+  coefficient of variation (-0.18), mean building height (-0.09).
+- Warming levers: bare-soil fraction (+0.42), built-up fraction (+0.31).
+- Per-zone models raise the patch-weighted pooled marginal R² to 0.38, reaching 0.55 in Dwa.
+- 144 Pareto-efficient patches in (UHI, density) space cluster into three archetypes.
+- Morphology explains a limited share of SUHI variance; background climate dominates, which
+  is consistent with Zhao et al. (2014, Nature) and Manoli et al. (2019, Nature).
+
+## Data files
+
+- data/published/uhi_morphology_patches_v1.parquet — 33,715 rows, 28 columns, full sample
+- data/published/uhi_morphology_patches_screened_v1.parquet — 33,498 rows, the modelling sample
+- data/published/diagnostics.json — global model coefficients, CIs, R², ICC
+- data/published/diagnostics_perzone.json — per-zone coefficients and fit statistics
+- data/published/pareto_summary.json — per-zone Pareto counts
+- data/published/archetype_cards.json — the three morphology archetypes
+- data/published/README.md — full column dictionary and known missing values
+
+## Code
+
+- src/ingest — Earth Engine ingest and city rosters
+- src/features — patch features and the quality screen
+- src/morphology — building-footprint morphology extraction
+- src/model — mixed-effects and XGBoost + SHAP
+- src/pareto — empirical Pareto extraction
+- src/typology — archetype clustering
+- src/metrics — R², ICC, hierarchical diagnostics
+- run/conf — Hydra configuration
+- run/pipeline — stage entry points, including make_figures.py
+
+## Scope and limitations
+
+The dependent variable is surface UHI from satellite land-surface temperature, not
+canopy-layer air temperature and not human thermal comfort. Building-height coverage is
+absent for about half the patches, sparsest in the Global South; a height-exclusion
+sensitivity analysis shows the conclusions do not depend on the height features.
+Coefficients are specific to the 1 km aggregation scale. The analysis is observational, so
+coefficients quantify association rather than identified causal effects.
+
+## Licence
+
+Code MIT. Data and paper text CC BY 4.0. Please cite the article when using either.
+
+## Contact
+
+Seyda Emekci, Department of Architecture, Ankara Yıldırım Beyazıt University — semekci@aybu.edu.tr

@@ -1,0 +1,101 @@
+# 64-city Köppen-stratified global sample.
+# Coverage of major urban climate classes: A (tropical), B (arid), C (temperate), D (continental).
+# Radius chosen roughly by city population: mega >25 km, large ~20 km, medium 15 km, small 10-12 km.
+# Target: 4-8 cities per Köppen class, totalling 64.
+
+name: full
+cities:
+  # --- A: Tropical (9 cities) ---
+  - { id: SIN, name: Singapore,    country: SG, lat:  1.35,  lon: 103.82,  koppen: Af,  radius_km: 20 }
+  - { id: KUL, name: KualaLumpur,  country: MY, lat:  3.14,  lon: 101.69,  koppen: Af,  radius_km: 20 }
+  - { id: JKT, name: Jakarta,      country: ID, lat: -6.21,  lon: 106.85,  koppen: Af,  radius_km: 25 }
+  - { id: MUM, name: Mumbai,       country: IN, lat: 19.08,  lon:  72.88,  koppen: Am,  radius_km: 25 }
+  - { id: HCM, name: HoChiMinh,    country: VN, lat: 10.82,  lon: 106.63,  koppen: Am,  radius_km: 20 }
+  - { id: BKK, name: Bangkok,      country: TH, lat: 13.76,  lon: 100.50,  koppen: Aw,  radius_km: 25 }
+  - { id: LOS, name: Lagos,        country: NG, lat:  6.52,  lon:   3.38,  koppen: Aw,  radius_km: 22 }
+  - { id: MNL, name: Manila,       country: PH, lat: 14.60,  lon: 120.98,  koppen: Aw,  radius_km: 18 }
+  - { id: DAR, name: DarEsSalaam,  country: TZ, lat: -6.79,  lon:  39.21,  koppen: Aw,  radius_km: 15 }
+
+  # --- B: Arid (10 cities) ---
+  - { id: CAI, name: Cairo,        country: EG, lat: 30.04,  lon:  31.24,  koppen: BWh, radius_km: 25 }
+  - { id: RUH, name: Riyadh,       country: SA, lat: 24.71,  lon:  46.67,  koppen: BWh, radius_km: 25 }
+  - { id: DXB, name: Dubai,        country: AE, lat: 25.20,  lon:  55.27,  koppen: BWh, radius_km: 18 }
+  - { id: PHX, name: Phoenix,      country: US, lat: 33.45,  lon: -112.07,  koppen: BWh, radius_km: 20 }
+  - { id: LAS, name: LasVegas,     country: US, lat: 36.17,  lon: -115.14,  koppen: BWh, radius_km: 15 }
+  - { id: KRT, name: Khartoum,     country: SD, lat: 15.50,  lon:  32.56,  koppen: BWh, radius_km: 15 }
+  - { id: TEH, name: Tehran,       country: IR, lat: 35.69,  lon:  51.39,  koppen: BSk, radius_km: 20 }
+  - { id: DEN, name: Denver,       country: US, lat: 39.74,  lon: -104.99,  koppen: BSk, radius_km: 15 }
+  - { id: ALA, name: Almaty,       country: KZ, lat: 43.24,  lon:  76.89,  koppen: BSk, radius_km: 15 }
+  - { id: SLC, name: SaltLakeCity, country: US, lat: 40.76,  lon: -111.89,  koppen: BSk, radius_km: 12 }
+
+  # --- Csa: Mediterranean hot-summer (8) ---
+  - { id: IST, name: Istanbul,     country: TR, lat: 41.02,  lon:  28.98,  koppen: Csa, radius_km: 25 }
+  - { id: BCN, name: Barcelona,    country: ES, lat: 41.39,  lon:   2.17,  koppen: Csa, radius_km: 15 }
+  - { id: ATH, name: Athens,       country: GR, lat: 37.98,  lon:  23.73,  koppen: Csa, radius_km: 15 }
+  - { id: LAX, name: LosAngeles,   country: US, lat: 34.05,  lon: -118.24,  koppen: Csa, radius_km: 25 }
+  - { id: MAD, name: Madrid,       country: ES, lat: 40.42,  lon:  -3.70,  koppen: Csa, radius_km: 18 }
+  - { id: ROM, name: Rome,         country: IT, lat: 41.90,  lon:  12.50,  koppen: Csa, radius_km: 15 }
+  - { id: LIS, name: Lisbon,       country: PT, lat: 38.72,  lon:  -9.14,  koppen: Csa, radius_km: 12 }
+  - { id: TLV, name: TelAviv,      country: IL, lat: 32.08,  lon:  34.78,  koppen: Csa, radius_km: 12 }
+
+  # --- Csb: Mediterranean warm-summer (3) ---
+  - { id: SFO, name: SanFrancisco, country: US, lat: 37.77,  lon: -122.42,  koppen: Csb, radius_km: 12 }
+  - { id: SCL, name: Santiago,     country: CL, lat: -33.45,  lon: -70.66,  koppen: Csb, radius_km: 20 }
+  - { id: OPO, name: Porto,        country: PT, lat: 41.15,  lon:  -8.61,  koppen: Csb, radius_km: 10 }
+
+  # --- Cfa: humid subtropical (8) ---
+  - { id: TYO, name: Tokyo,        country: JP, lat: 35.68,  lon: 139.76,  koppen: Cfa, radius_km: 30 }
+  - { id: SHA, name: Shanghai,     country: CN, lat: 31.23,  lon: 121.47,  koppen: Cfa, radius_km: 25 }
+  - { id: SYD, name: Sydney,       country: AU, lat: -33.87,  lon: 151.21,  koppen: Cfa, radius_km: 20 }
+  - { id: BUE, name: BuenosAires,  country: AR, lat: -34.61,  lon: -58.40,  koppen: Cfa, radius_km: 20 }
+  - { id: HOU, name: Houston,      country: US, lat: 29.76,  lon: -95.37,  koppen: Cfa, radius_km: 25 }
+  - { id: MIA, name: Miami,        country: US, lat: 25.76,  lon: -80.20,  koppen: Cfa, radius_km: 18 }
+  - { id: BNE, name: Brisbane,     country: AU, lat: -27.47,  lon: 153.03,  koppen: Cfa, radius_km: 15 }
+  - { id: GRU, name: SaoPaulo,     country: BR, lat: -23.55,  lon: -46.63,  koppen: Cfa, radius_km: 25 }
+
+  # --- Cfb: oceanic (8) ---
+  - { id: LON, name: London,       country: GB, lat: 51.51,  lon:  -0.13,  koppen: Cfb, radius_km: 20 }
+  - { id: PAR, name: Paris,        country: FR, lat: 48.86,  lon:   2.35,  koppen: Cfb, radius_km: 18 }
+  - { id: BER, name: Berlin,       country: DE, lat: 52.52,  lon:  13.40,  koppen: Cfb, radius_km: 20 }
+  - { id: SEA, name: Seattle,      country: US, lat: 47.61,  lon: -122.33,  koppen: Cfb, radius_km: 15 }
+  - { id: AMS, name: Amsterdam,    country: NL, lat: 52.37,  lon:   4.90,  koppen: Cfb, radius_km: 12 }
+  - { id: MEL, name: Melbourne,    country: AU, lat: -37.81,  lon: 144.96,  koppen: Cfb, radius_km: 20 }
+  - { id: AKL, name: Auckland,     country: NZ, lat: -36.85,  lon: 174.76,  koppen: Cfb, radius_km: 15 }
+  - { id: DUB, name: Dublin,       country: IE, lat: 53.35,  lon:  -6.26,  koppen: Cfb, radius_km: 12 }
+
+  # --- Cwa: subtropical dry-winter (5) ---
+  - { id: DEL, name: Delhi,        country: IN, lat: 28.61,  lon:  77.21,  koppen: Cwa, radius_km: 25 }
+  - { id: HKG, name: HongKong,     country: HK, lat: 22.30,  lon: 114.17,  koppen: Cwa, radius_km: 15 }
+  - { id: CAN, name: Guangzhou,    country: CN, lat: 23.13,  lon: 113.26,  koppen: Cwa, radius_km: 20 }
+  - { id: HAN, name: Hanoi,        country: VN, lat: 21.03,  lon: 105.85,  koppen: Cwa, radius_km: 18 }
+  - { id: TPE, name: Taipei,       country: TW, lat: 25.03,  lon: 121.57,  koppen: Cwa, radius_km: 12 }
+
+  # --- Cwb: subtropical highland (4) ---
+  - { id: MEX, name: MexicoCity,   country: MX, lat: 19.43,  lon: -99.13,  koppen: Cwb, radius_km: 25 }
+  - { id: NBO, name: Nairobi,      country: KE, lat: -1.29,  lon:  36.82,  koppen: Cwb, radius_km: 15 }
+  - { id: ADD, name: AddisAbaba,   country: ET, lat:  9.03,  lon:  38.74,  koppen: Cwb, radius_km: 12 }
+  - { id: BOG, name: Bogota,       country: CO, lat:  4.71,  lon: -74.07,  koppen: Cwb, radius_km: 15 }
+
+  # --- Dfa: hot-summer humid continental (4) ---
+  - { id: NYC, name: NewYork,      country: US, lat: 40.71,  lon: -74.01,  koppen: Dfa, radius_km: 20 }
+  - { id: CHI, name: Chicago,      country: US, lat: 41.88,  lon: -87.63,  koppen: Dfa, radius_km: 22 }
+  - { id: DET, name: Detroit,      country: US, lat: 42.33,  lon: -83.05,  koppen: Dfa, radius_km: 15 }
+  - { id: YYZ, name: Toronto,      country: CA, lat: 43.65,  lon: -79.38,  koppen: Dfa, radius_km: 18 }
+
+  # --- Dfb: warm-summer humid continental (4) ---
+  - { id: MOW, name: Moscow,       country: RU, lat: 55.75,  lon:  37.62,  koppen: Dfb, radius_km: 22 }
+  - { id: WAW, name: Warsaw,       country: PL, lat: 52.23,  lon:  21.01,  koppen: Dfb, radius_km: 15 }
+  - { id: YUL, name: Montreal,     country: CA, lat: 45.50,  lon: -73.57,  koppen: Dfb, radius_km: 15 }
+  - { id: MSP, name: Minneapolis,  country: US, lat: 44.98,  lon: -93.27,  koppen: Dfb, radius_km: 15 }
+
+  # --- Dsa: continental Mediterranean hot (1) ---
+  - { id: ANK, name: Ankara,       country: TR, lat: 39.93,  lon:  32.86,  koppen: Dsa, radius_km: 15 }
+
+  # --- Dwa: monsoon-influenced continental (2) ---
+  - { id: PEK, name: Beijing,      country: CN, lat: 39.90,  lon: 116.41,  koppen: Dwa, radius_km: 22 }
+  - { id: ICN, name: Seoul,        country: KR, lat: 37.57,  lon: 126.98,  koppen: Dwa, radius_km: 20 }
+
+# Total: 9+10+8+3+8+8+5+4+4+4+1+2 = 66 cities  (target 64, +2 for margin)
+# NOTE: Final numbered sample may shrink to ≤64 if certain cities have insufficient
+# Open Buildings coverage or cloud-constrained Landsat scenes; the pipeline skips
+# per-city parquet whose patch count falls below an acceptable threshold.

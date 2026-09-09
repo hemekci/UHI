@@ -1,0 +1,29 @@
+# Complementary XGBoost on within-city-centred UHI target.
+# City-constant context features (era5, elevation, latitude) MUST be dropped
+# upstream — this model only receives morphology features.
+
+name: within_city_xgboost
+kind: within_city_xgboost
+per_zone: false
+
+params:
+  max_depth: 6
+  learning_rate: 0.05
+  n_estimators: 1500
+  subsample: 0.85
+  colsample_bytree: 0.8
+  min_child_weight: 5
+  reg_lambda: 1.0
+  early_stopping_rounds: 100
+  random_state: ${seed}
+  n_jobs: -1
+
+shap:
+  top_k_features: 5
+  top_k_interactions: 5
+  compute: true
+  explainer: tree
+
+bootstrap_stability:
+  n_boot: 20
+  top_k: 5
