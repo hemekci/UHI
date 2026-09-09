@@ -3,7 +3,7 @@
 Local-only data directory. Contents under `data/raw/`, `data/interim/`, and
 `data/processed/` are gitignored — never commit raw or processed data here.
 
-External data sources used by the pipeline (links to be finalised on release):
+External data sources used by the pipeline:
 
 - **Landsat 8/9 LST** — USGS Earth Explorer / Google Earth Engine
 - **MODIS LST (MOD11A1 / MYD11A1)** — NASA LP DAAC
@@ -17,7 +17,7 @@ External data sources used by the pipeline (links to be finalised on release):
 - **ERA5-Land** — Copernicus Climate Data Store
 - **Köppen–Geiger 2007–2023** — Beck et al. (2023)
 
-The harmonised per-patch table covers **66 cities / 14 Köppen zones / 33,715
+The harmonised per-patch table covers **66 cities / 15 Köppen zones / 33,715
 one-km² built-up patches**. A physical-plausibility quality screen
 (`|UHI anomaly| <= 40 °C`) is applied at analysis time, leaving **33,498**
 patches for modelling (the 217 removed patches are residual-cloud artifacts,

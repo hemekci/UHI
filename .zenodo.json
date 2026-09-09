@@ -1,9 +1,11 @@
 {
   "title": "UHI: Continuous Morphology Archetypes for Heat Mitigation Across Cities",
-  "description": "<p>Companion repository for the manuscript <em>Beyond Local Climate Zones: Continuous Morphology Archetypes for Heat Mitigation Across 66 Cities</em> (Emekci &amp; Emekci), submitted to <em>Sustainable Cities and Society</em>. Hosts the full ingest → features → models → archetypes pipeline, Hydra configs, reproducibility notebooks, and the harmonised per-patch morphology–UHI table for 66 cities under an open licence.</p>",
+  "description": "<p>Companion code and data for the published article <strong>Emekci, S. &amp; Emekci, H. (2026). Beyond local climate zones: Continuous morphology archetypes for heat mitigation across 66 cities. <em>Sustainable Cities and Society</em>, 150, 107814.</strong> <a href=\"https://doi.org/10.1016/j.scs.2026.107814\">https://doi.org/10.1016/j.scs.2026.107814</a></p><p>Hosts the full ingest &rarr; features &rarr; models &rarr; archetypes pipeline, Hydra configs, reproducibility notebooks, the published figures, and the harmonised per-patch morphology&ndash;UHI table for 66 cities across 15 K&ouml;ppen climate zones (33,715 one-square-kilometre patches; 33,498 retained after a physical-plausibility screen).</p><p>Please cite the article for the findings, and this record if you use the code or the data table. Source repository: <a href=\"https://github.com/hemekci/UHI\">https://github.com/hemekci/UHI</a></p>",
   "license": "MIT",
   "upload_type": "software",
   "access_right": "open",
+  "version": "v0.2.0",
+  "language": "eng",
   "creators": [
     {
       "name": "Emekci, Seyda",
@@ -11,26 +13,43 @@
     },
     {
       "name": "Emekci, Hakan",
-      "affiliation": "Graduate School of Sciences, TED University, Ankara, Türkiye"
+      "affiliation": "Institute of Informatics, Hacettepe University, Ankara, Türkiye"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1016/j.scs.2026.107814",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/hemekci/UHI",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
     }
   ],
   "keywords": [
     "urban heat island",
+    "surface urban heat island",
     "urban morphology",
-    "satellite remote sensing",
     "land surface temperature",
+    "satellite remote sensing",
+    "building footprints",
+    "Local Climate Zones",
+    "Köppen climate zones",
+    "mixed-effects model",
     "machine learning",
     "SHAP",
-    "mixed-effects model",
-    "multi-city study",
+    "explainable machine learning",
     "Pareto frontier",
     "climate-smart design",
-    "building footprints",
-    "Köppen climate zones",
+    "heat mitigation",
+    "multi-city study",
     "reproducibility"
   ],
   "communities": [
     { "identifier": "earth-science" }
-  ],
-  "language": "eng"
+  ]
 }
